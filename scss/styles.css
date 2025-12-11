@@ -396,6 +396,19 @@ section {
   color: var(--text-muted);
 }
 
+@media (max-width: 520px) {
+  .about-list span:first-child {
+    width: auto;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .about-list li {
+    margin-bottom: 14px;
+  }
+}
+
+
 .about-list li {
   margin-bottom: 8px;
 }
@@ -635,16 +648,22 @@ footer {
 }
 
 @media (max-width: 640px) {
+  .nav {
+    padding: 12px 4vw;
+  }
+
   .nav__links {
-    display: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    font-size: 0.72rem;
+    letter-spacing: 0.10em;
   }
 
   .hero__actions {
     flex-direction: column;
     align-items: flex-start;
   }
-
-  .hero {
-    gap: 32px;
-  }
 }
+

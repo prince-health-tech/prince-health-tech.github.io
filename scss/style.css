@@ -380,6 +380,19 @@ section {
   color: var(--text-muted);
 }
 
+@media (max-width: 520px) {
+  .about-list span:first-child {
+    width: auto;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .about-list li {
+    margin-bottom: 14px;
+  }
+}
+
+
 .about-list li {
   margin-bottom: 8px;
 }
@@ -619,6 +632,7 @@ footer {
 }
 
 @media (max-width: 640px) {
+@media (max-width: 640px) {
   .nav__links {
     display: none;
   }
@@ -631,4 +645,5 @@ footer {
   .hero {
     gap: 32px;
   }
+}
 }
