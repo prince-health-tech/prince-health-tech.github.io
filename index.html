@@ -731,6 +731,97 @@
 h3{margin-bottom:10px}
 
 
+/* Hamburger button base */
+.nav__toggle{
+  display: none;              /* hidden on desktop */
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.nav__toggle span{
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 999px;
+  background: rgba(248, 250, 252, 0.9);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav__toggle span + span{
+  margin-top: 4px;
+}
+
+/* Desktop nav */
+@media (min-width: 769px){
+  .nav__links{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    position: static;
+    background: none;
+    transform: none;
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+/* Mobile nav */
+@media (max-width: 768px){
+  .nav{
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+
+  .nav__toggle{
+    display: inline-flex;     /* show hamburger */
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .nav__links{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    padding: 12px 5vw 16px;
+    background: rgba(7, 10, 22, 0.97);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    transform: translateY(-8px);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* When nav is open */
+  .nav.nav--open .nav__links{
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+/* Optional: animate lines into X when open */
+.nav.nav--open .nav__toggle span:nth-child(1){
+  transform: translateY(6px) rotate(45deg);
+}
+.nav.nav--open .nav__toggle span:nth-child(2){
+  opacity: 0;
+}
+.nav.nav--open .nav__toggle span:nth-child(3){
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+
+
+
+
   </style>
 </head>
 <body>
@@ -740,6 +831,13 @@ h3{margin-bottom:10px}
    <!-- <div class="nav__logo">
       <span class="nav__dot"></span> PRINCE MASIH
     </div>-->
+
+    <button class="nav__toggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
     <nav class="nav__links">
       <a href="#hero" data-scroll-to>Home</a>
       <a href="#about" data-scroll-to>About</a>
