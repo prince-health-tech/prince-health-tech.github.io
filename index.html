@@ -447,6 +447,7 @@
       font-size: 0.98rem;
       font-weight: 500;
       margin-bottom: 2px;
+      COLOR: #ffbd39;
     }
 
     .timeline-org {
@@ -694,6 +695,43 @@
   filter: saturate(1.4) contrast(1.1);
   transform: scale(1.02);
 }
+
+
+.social-links{
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.social-links a{
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background: radial-gradient(circle at 30% 0%, rgba(248, 250, 252, 0.18), transparent 55%);
+  transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.15s ease;
+}
+
+.social-links a svg{
+  width: 18px;
+  height: 18px;
+  fill: rgba(226, 232, 240, 0.9);
+}
+
+.social-links a:hover{
+  border-color: rgba(248, 250, 252, 0.9);
+  transform: translateY(-1px);
+}
+
+
+
+
+
+
 
 /* overlay that “blends” the photo into the dark UI */
 .hero__cover::after{
@@ -1174,11 +1212,36 @@ h3{margin-bottom:10px}
             <p class="contact-cta">
               If you’d like, you can email me directly or connect on LinkedIn and I’ll respond as soon as I can.
             </p>
-            <div class="social-row">
+            <!--<div class="social-row">
               <a class="social-pill" href="www.linkedin.com/in/prince-mca8757" target="_blank" rel="noopener">LinkedIn</a>
               <a class="social-pill" href="https://github.com/prince-health-tech" target="_blank" rel="noopener">GitHub</a>
               <a class="social-pill" href="https://www.behance.net/prince-mca" target="_blank" rel="noopener">Behance</a>
-            </div> 
+            </div> -->
+
+<div class="social-links">
+  <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" aria-label="LinkedIn" target="_blank" rel="noopener">
+    <!-- LinkedIn icon -->
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M4.98 3.5C4.98 4.88 3.9 6 2.5 6 1.12 6 0 4.88 0 3.5 0 2.12 1.12 1 2.5 1 3.9 1 4.98 2.12 4.98 3.5zM.25 8.25h4.5V23.5h-4.5V8.25zM8.5 8.25h4.32v2.08h.06c.6-1.13 2.07-2.32 4.27-2.32 4.57 0 5.41 3.01 5.41 6.92V23.5h-4.5v-7.1c0-1.69-.03-3.87-2.36-3.87-2.36 0-2.72 1.84-2.72 3.74v7.23h-4.5V8.25z" />
+    </svg>
+  </a>
+
+  <a href="https://www.behance.net/YOUR-BEHANCE" aria-label="Behance" target="_blank" rel="noopener">
+    <!-- Behance icon -->
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M9.4 11.04c.61-.3 1.01-.88 1.01-1.68C10.41 7.85 9.4 7 7.7 7H3v10h4.9c1.89 0 3.07-1.25 3.07-3.25 0-1.23-.49-2.08-1.57-2.71zM5.3 8.68h2.12c.7 0 1.14.42 1.14 1.09 0 .64-.44 1.09-1.14 1.09H5.3V8.68zm2.31 7H5.3v-2.48h2.41c.85 0 1.35.52 1.35 1.24 0 .76-.5 1.24-1.45 1.24zM19.89 7.19h-4.38v1.29h4.38V7.19zM17.66 9.3c-3 0-4.78 1.93-4.78 4.47 0 2.62 1.79 4.48 4.78 4.48 2.5 0 4.26-1.33 4.54-3.63l.03-.25h-2.43l-.03.16c-.21 1.07-.99 1.7-2.11 1.7-1.31 0-2.21-.9-2.3-2.33h6.86v-.46c0-2.78-1.62-4.64-4.56-4.64zm-2.09 3.72c.18-1.08.92-1.78 2.05-1.78 1.11 0 1.88.7 2 1.78h-4.05z" />
+    </svg>
+  </a>
+
+  <a href="https://github.com/YOUR-GITHUB" aria-label="GitHub" target="_blank" rel="noopener">
+    <!-- GitHub icon -->
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 .5C5.65.5.75 5.4.75 11.76c0 4.99 3.24 9.22 7.73 10.71.57.11.78-.24.78-.55 0-.27-.01-1.17-.02-2.12-3.14.68-3.8-1.33-3.8-1.33-.52-1.32-1.26-1.68-1.26-1.68-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.18 1.74 1.18 1.01 1.73 2.64 1.23 3.28.94.1-.74.39-1.23.7-1.52-2.51-.29-5.15-1.26-5.15-5.6 0-1.24.44-2.25 1.17-3.04-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.16a10.9 10.9 0 0 1 2.87-.39c.97 0 1.95.13 2.87.39 2.19-1.47 3.14-1.16 3.14-1.16.63 1.58.24 2.75.12 3.04.73.79 1.16 1.8 1.16 3.04 0 4.36-2.65 5.31-5.18 5.6.4.34.76 1.02.76 2.06 0 1.49-.01 2.69-.01 3.05 0 .31.2.67.79.55 4.48-1.49 7.72-5.72 7.72-10.71C23.25 5.4 18.35.5 12 .5z" />
+    </svg>
+  </a>
+</div>
+
+
 
           </div>
         </div>
